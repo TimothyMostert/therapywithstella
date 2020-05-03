@@ -1,0 +1,97 @@
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+// colours
+$primary-color : #2993B9;
+$secondary-color : #68aa9d;
+$background : #E9F9FF;
+$secondary-background: #C8E0F4;
+$font-color : #364652;
+
+// Typography
+$font-heading: 'Roboto', sans-serif;
+$font-body: 'Open Sans', sans-serif;
+
+h1 {
+  font-family: $font-heading;
+  color: $font-color;
+  font-size: 51px;
+  line-height: 54px;
+}
+
+h2 {
+  font-family: $font-heading;
+  color: $font-color;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+h3 {
+    font-family: $font-heading;
+  color: $font-color;
+  font-size: 30px;
+  line-height: 32px;
+}
+
+h4 {
+    font-family: $font-heading;
+  color: $font-color;
+  font-size: 23px;
+  line-height: 22px;
+}
+
+p,
+div,
+a {
+    font-family: $font-body;
+  font-size: 14px;
+  line-height: 18px;
+  color: $font-color;
+  font-weight: 400;
+}
+
+$colors: ("white": ($white, $black),
+  "black": ($black, $white),
+  "light": ($light, $light-invert),
+  "dark": ($dark, $dark-invert),
+  "primary": ($primary-color, $primary-invert),
+  "secondary": ($secondary-color, $primary-invert),
+  "font-color": ($font-color, $white),
+  "background": ($background, $white),
+  "secondary-background": ($secondary-background, $white),
+  "info": ($info, $info-invert),
+  "success": ($success, $success-invert),
+  "warning": ($warning, $warning-invert),
+  "danger": ($danger, $danger-invert));
+
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+//Mobile - Desktop Classes
+.desktop-only {
+  display: none !important;
+}
+
+@media (min-width:781px) {
+  .mobile-only {
+    display: none !important;
+  }
+
+  .desktop-only {
+    display: unset !important;
+  }
+}
+
+// Animations
+@keyframes fold-in {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
